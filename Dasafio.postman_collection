@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "207015b9-05c0-4877-b06e-6fb7695300fd",
+		"name": "Uso - pessoal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14689641"
+	},
+	"item": [
+		{
+			"name": "Desafio getAddress",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"streetName\": \"abc\",\r\n        \"number\": 123,\r\n        \"complement\": \"abc123\",\r\n        \"neighbourhood\": \"abc\",\r\n        \"city\": \"abc\",\r\n        \"state\": \"ab\",\r\n        \"country\": \"abc\",\r\n        \"zipcode\": \"a1b2\",\r\n        \"latitude\": 123,\r\n        \"logitude\": 321\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dasafio putAddress",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"streetName\": \"Avenida Paulista\",\r\n    \"number\": 1000,\r\n    \"complement\": \"Apto 101\",\r\n    \"neighbourhood\": \"Bela Vista\",\r\n    \"city\": \"Sao Paulo\",\r\n    \"state\": \"SP\",\r\n    \"country\": \"Brasill\",\r\n    \"zipcode\": \"01310-100\",\r\n    \"latitude\": \"-23.55686024867872\",\r\n    \"longitude\": \"-46.66141214028928\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dasafio deleteAddress",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"id\": 1,\r\n        \"streetName\": \"wallace\",\r\n        \"number\": 123,\r\n        \"complement\": \"abc123\",\r\n        \"neighbourhood\": \"abc\",\r\n        \"city\": \"abc\",\r\n        \"state\": \"ab\",\r\n        \"country\": \"abc\",\r\n        \"zipcode\": \"a1b2\",\r\n        \"latitude\": 123,\r\n        \"logitude\": 321\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/address?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desafio include",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"streetName\": \"Avenida Paulista\",\r\n  \"number\": 1000,\r\n  \"complement\": \"Apto 101\",\r\n  \"neighbourhood\": \"Bela Vista\",\r\n  \"city\": \"Sao Paulo\",\r\n  \"state\": \"SP\",\r\n  \"country\": \"Brasil\",\r\n  \"zipcode\": \"01310-100\",\r\n  \"latitude\": null,\r\n  \"longitude\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/address",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"address"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
